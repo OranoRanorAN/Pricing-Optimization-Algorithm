@@ -8,13 +8,13 @@ This problem addresses the challenge of finding the right pricing strategy for e
 We have historical sales data for *m* SKUs, which includes its sales quantity (also called *sold*) under certain markdown (MD). For **the set of SKUs**,  we define:
 - **Demand Calculation (DEMAND):** Demand represents the total demand for all SKUs, calculated as the sum of the demand for each SKU.
   
-  $DEMAND = \sum_{i=1}^mdemand_i = \sum_{i=1}^m (sold_i * MSRP_i * MD_i)$
+  $$DEMAND = \sum_{i=1}^{m}demand_i = \sum_{i=1}^m (sold_i * MSRP_i * MD_i)$$
 - **Inventory Calculation (INVENTORY):** Inventory represents the total inventory for all SKUs, accounting for sales quantities.
   
-  $INVENTORY = \sum_{i=1}^m(inventory_i - sold_-i)$
+  $$INVENTORY = \sum^{m}(inventory_i - sold_-i)$$
 - **Weighted Markdown (Weighted MD):** Weighted MD represents the weighted average of markdowns (discount rates) for all SKUs, where the weights are determined by demand, prices, and sales quantities. It measures the overall markdown effectiveness.
 
-  $Weighted \ MD = 1- {\sum_{i=1}^mDamand_i} / {((\sum_{i=1}^m Sold_i)(\sum_{i=1}^m MSRP_i))}$
+  $$Weighted \ MD = 1- {\sum_{i=1}^mDamand_i} / {((\sum_{i=1}^m Sold_i)(\sum_{i=1}^m MSRP_i))}$$
 
 The problem also involves **fitting a demand curve** for each SKU to estimate the demand at different price points. The demand curve is typically estimated using one of three functions:
 1. **Linear Function:**  $ sold = a*MD+b $
