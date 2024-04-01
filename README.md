@@ -17,10 +17,11 @@ We have historical sales data for *m* SKUs, which includes its sales quantity (a
   $$Weighted \ MD = 1- {\sum_{i=1}^mDamand_i} / {((\sum_{i=1}^m Sold_i)(\sum_{i=1}^m MSRP_i))}$$
 
 The problem also involves **fitting a demand curve** for each SKU to estimate the demand at different price points. The demand curve is typically estimated using one of three functions:
-1. **Linear Function:**  $ sold = a*MD+b $
-2. **Exponential Function:** $ sold= a*\exp(b*MD) $
-3. **Logarithmic Function:** $ sold = a + b*\log(MD+1) $
-Where $a$ and $b$ are constants determined by curve fitting
+1. **Linear Function:**  $sold = a*MD+b$
+2. **Exponential Function:** $sold= a*\exp(b*MD)$
+3. **Logarithmic Function:** $sold = a + b*\log(MD+1)$
+
+Where $a$ and $b$ are constants, determined by curve fitting
 
 ### Problem Constraints
 - Each SKU has **upper and lower bounds for markdown (MD)** that must be adhered to.
